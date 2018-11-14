@@ -1,9 +1,18 @@
-<h1><%= @restaurant.name %></h1>
-<h2><%= @restaurant.address %></h2>
-<p><%= @restaurant.phone_number %></p>
-<div class="container">
-  <% @restaurant.reviews.each do |x|  %>
-  <p><%= x.rating %></p>
-  <p><%= x.content %></p>
-  <% end  %>
+<div class="container name">
+  <h1><%= @restaurant.name %></h1>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+</div>
+
+
+<div class="flex-cards"><% @restaurant.reviews.each do |x|  %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @restaurant.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= x.rating %></h6>
+      <p class="card-text"><%= x.content %></p>
+      <a href="#" class="card-link">Card link</a>
+    </div>
+  </div>
+  <% end %>
 </div>

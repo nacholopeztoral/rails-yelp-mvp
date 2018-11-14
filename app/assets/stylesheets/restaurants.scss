@@ -1,3 +1,20 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Spinnaker', sans-serif !important;
+}
+.name {
+  color: rgb(44,65,66) !important;
+}
+div.flex-cards {
+  color: rgb(210,247,242) !important;
+  background-color:  rgb(44,65,66) !important;
+}
+div.container.name {
+  text-align: center !important;
+}
+div.card {
+padding: 10px !important;
+    margin-bottom: 15px !important;
+  }
