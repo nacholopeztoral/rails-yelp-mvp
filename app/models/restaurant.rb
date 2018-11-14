@@ -1,9 +1,9 @@
 class Restaurant < ApplicationRecord
-  has_many :reviews
-  validates :name, :address, :category, :content, presence: true
-  validates :size, inclusion: { in: ['chinese', 'italian', 'japanese', 'french', 'belgian'] }
-  validates :rating, length: { minimum: 0 }
-  validates :rating, length: { maximum: 5 }
+  has_many :reviews, dependent: :destroy
+  validates :name, :address, presence: true
+  validates :category, inclusion: { in: %w(chinese italian japanese french belgian) },
+            presence: true
+
 end
 #   has a name
 #   has an address
